@@ -1,0 +1,60 @@
+:root {
+    color-scheme: dark;
+    --bg: #0b1020;
+    --fg: #e8ecff;
+    --muted: #aab3d6;
+    --card: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.12);
+    --accent: #22c55e;
+    --danger: #ef4444;
+    --focus: rgba(59, 130, 246, 0.65);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(1200px 800px at 20% -10%, rgba(59, 130, 246, 0.25), transparent 60%),
+        radial-gradient(900px 600px at 90% 0%, rgba(34, 197, 94, 0.18), transparent 55%),
+        var(--bg);
+    color: var(--fg);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+        "Segoe UI Emoji";
+    line-height: 1.35;
+}
+
+a {
+    color: inherit;
+}
+
+::selection {
+    background: rgba(34, 197, 94, 0.25);
+}
+
+*:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+}
+
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-fade-in {
+    animation: page-fade-in 200ms ease-out;
+}
